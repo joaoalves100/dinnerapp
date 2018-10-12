@@ -1,0 +1,9 @@
+{% if meals_available %}
+    <ul>
+    {% for meal in meals_available %}
+        <li><a href="/reservations/meal/{{ meal.id }}/"><b>{{ meal.meal_description }}<b/> na data : {{ meal.meal_date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No meals are available.</p>
+{% endif %}
